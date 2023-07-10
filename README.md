@@ -1,11 +1,40 @@
-# GitHub Codespaces ♥️ React
+# Format Phone Input ♥️ React
 
-Welcome to your shiny new Codespace running React! We've got everything fired up and running for you to explore React.
+This repository is a react version implementation of a custom phone number input.
 
-You've got a blank canvas to work on from a git perspective as well. There's a single initial commit with the what you're seeing right now - where you go from here is up to you!
+Given a phone number input element, it should dynamically react to a user typing and format the number to match the pattern: (ddd) ddd-dddd (aka match the requirement for a ([area-code]) [prefix]-[local] format).
 
-Everything you do here is contained within this one codespace. There is no repository on GitHub yet. If and when you’re ready you can click "Publish Branch" and we’ll create your repository and push up your project. If you were just exploring then and have no further need for this code then you can simply delete your codespace and it's gone forever.
+1. Given an Html input of type="tel" and id="phone"
+2. Only digits [0-9] are allowed as input.
+3. User should be able to edit the number at any caret position (aka insert/delete digits).
+4. Input should reflect the pattern/format even when a fewer than 10 digits where typed/entered.
 
+Example:
+If the user consecutively entered the sequence: 1 2 3 4 5 6 7 8 9 0, the input should respectively show:
+
+  1
+  
+  12
+  
+  123
+  
+  (123) 4
+  
+  (123) 45
+  
+  (123) 456
+  
+  (123) 456-7
+  
+  (123) 456-78
+  
+  (123) 456-789
+  
+  (123) 456-7890
+
+
+
+This project was published using GitHub Codespaces.
 This project was bootstrapped for you with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
