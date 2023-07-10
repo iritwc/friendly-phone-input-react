@@ -17,7 +17,6 @@ export default function PhoneInput() {
     }
 
     function handleChange(e) {
-
         const {value, selectionStart} = e.target;
         const format = formatPhone(value);
         const start = repositionStart(value, format, selectionStart);
