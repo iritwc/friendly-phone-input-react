@@ -1,6 +1,5 @@
 import { render, screen, fireEvent, keyboard } from '@testing-library/react';
 import PhoneInput from './phoneInput';
-// import { keyboard } from '@testing-library/user-event';
 
 const setup = async () => {
   const utils = render(<PhoneInput />);
@@ -9,11 +8,7 @@ const setup = async () => {
     input,
     ...utils,
   }
-}
-
-// afterEach(() => )
- // fireEvent.keyDown(input, {key: 'ArrowLeft', code: 'ArrowLeft', keyCode: 37});
-    // fireEvent.keyDown(input, {key: 3, code: 'Digit3', keyCode: 51});
+};
 
 test('It should not allow letters to be inputted', async () => {
   const {input} = await setup()
@@ -51,10 +46,10 @@ test('It should reposition the caret and keep format rule on insert-within', asy
   fireEvent.change(input, {target: {value: input.value, selectionStart: input.selectionStart-1}});
   expect(input.selectionStart).toBe(2);
    
-  // Insert digit (4) in previous position (2)
-  fireEvent.change(input, {target: {value: '1234', selectionStart: input.selectionStart }});
+  // Insert digit '3' into position 2
+  fireEvent.change(input, {target: {value: '1234', selectionStart: input.selectionStart+1 }});
   expect(input.value).toBe('(123) 4');
-  // expect(input.selectionStart).toBe(4);
+  expect(input.selectionStart).toBe(4);
 });
 
 test('It should reposition the caret and keep format rule on a delete-within', async () => {
