@@ -35,7 +35,9 @@ If the user consecutively entered the sequence: 1 2 3 4 5 6 7 8 9 0, the input s
 
 
 This project was published using GitHub Codespaces.
+
 This project was bootstrapped for you with [Create React App](https://github.com/facebook/create-react-app).
+
 
 ## Available Scripts
 
